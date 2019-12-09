@@ -1,7 +1,9 @@
 No diretorio do projeto, rodar os seguintes comandos:
 
 # Docker
+Primeiro comando:
 > docker build .
+Segundo comando:
 > docker-compose up
 
 # Dump da tabela
