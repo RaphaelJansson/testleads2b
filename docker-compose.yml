@@ -1,0 +1,24 @@
+version: "2"
+services:
+  db:
+    image: "postgres:latest"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=raphael
+      - POSTGRES_PASSWORD=raphael
+      - POSTGRES_DB=leads2b
+  node:
+    container_name: node
+    build: .
+    user: "node"
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+  node_front:
+    container_name: node_front
+    image: "raphaeljansson/leads2b_front:latest"
+    ports:
+      - "8080:8080"
+  
